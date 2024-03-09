@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Generator</h1>
+      <p>Generate a secure, random password</p>
+      <div class="pass">
+        <i class="fa-solid fa-lock fa-xl" id="lock"></i>
+        <input type="text" readonly id="generated_pass" />
+        <button id="cp_icon">
+          <i class="fa-regular fa-clone fa-xl"></i>
+        </button>
+      </div>
+      <div class="setting">
+        <div class="left">
+          <h4>Setting</h4>
+          <div class="checks">
+            <div>
+              <input type="checkbox" id="upper" />
+              <label for="upper">UpperCase</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="lower" />
+              <label for="lower">LoweCase</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="sym" />
+              <label for="sym">Symbols</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="num" />
+              <label for="num">Numbers</label>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <h4>Length</h4>
+          <div>
+            <span class="num" id="rng_box"></span>
+            <input type="range" min="5" max="50" value="8" id="rng" />
+          </div>
+        </div>
+      </div>
+      <button id="generate_click">Generate Password</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
